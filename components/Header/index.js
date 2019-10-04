@@ -25,7 +25,7 @@ function Header() {
 
   ///content
   date.textContent = "SMARCH 28, 2019";
-  temp.textContent = "98";
+  temp.textContent = "98°";
 
   /////Append Elements
   header.appendChild(date);
