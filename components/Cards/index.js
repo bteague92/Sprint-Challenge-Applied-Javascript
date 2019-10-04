@@ -11,25 +11,37 @@ axios
   .get("https://lambda-times-backend.herokuapp.com/articles")
   .then(response => {
     // console.log(response);
-    response.data.articles.bootstrap.forEach(f => {
-      cards.appendChild(createCard(f.headline, f.authorPhoto, f.authorName));
-    });
-    response.data.articles.javascript.forEach(f => {
-      cards.appendChild(createCard(f.headline, f.authorPhoto, f.authorName));
-    });
-    response.data.articles.jquery.forEach(f => {
-      cards.appendChild(createCard(f.headline, f.authorPhoto, f.authorName));
-    });
-    response.data.articles.node.forEach(f => {
-      cards.appendChild(createCard(f.headline, f.authorPhoto, f.authorName));
-    });
-    response.data.articles.technology.forEach(f => {
-      cards.appendChild(createCard(f.headline, f.authorPhoto, f.authorName));
+    const topicArray = Object.values(response.data.articles);
+    // console.log(topicArray);
+    topicArray.forEach(f => {
+      f.forEach(x => {
+        cards.appendChild(createCard(x.headline, x.authorPhoto, x.authorName));
+      });
     });
   })
   .catch(error => {
     console.log("The data was not returned", error);
   });
+//   });
+// response.data.articles.bootstrap.forEach(f => {
+//   cards.appendChild(createCard(f.headline, f.authorPhoto, f.authorName));
+// });
+// response.data.articles.javascript.forEach(f => {
+//   cards.appendChild(createCard(f.headline, f.authorPhoto, f.authorName));
+// });
+// response.data.articles.jquery.forEach(f => {
+//   cards.appendChild(createCard(f.headline, f.authorPhoto, f.authorName));
+// });
+// response.data.articles.node.forEach(f => {
+//   cards.appendChild(createCard(f.headline, f.authorPhoto, f.authorName));
+// });
+// response.data.articles.technology.forEach(f => {
+//   cards.appendChild(createCard(f.headline, f.authorPhoto, f.authorName));
+// });
+//   })
+//   .catch(error => {
+//     console.log("The data was not returned", error);
+//   });
 
 // Create a function that will programmatically create the following DOM component:
 //
