@@ -10,7 +10,7 @@ let cards = document.querySelector(".cards-container");
 axios
   .get("https://lambda-times-backend.herokuapp.com/articles")
   .then(response => {
-    console.log(response);
+    // console.log(response);
     response.data.articles.bootstrap.forEach(f => {
       cards.appendChild(createCard(f.headline, f.authorPhoto, f.authorName));
     });
