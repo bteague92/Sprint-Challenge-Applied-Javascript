@@ -7,6 +7,46 @@
     6. Have fun!
 */
 
+// let daCarousel = document.querySelector(".carousel-container");
+
+// function createCarousel() {
+//   const carousel = document.createElement("div");
+//   const lButton = document.createElement("div");
+//   const imgOne = document.createElement("img");
+//   const imgTwo = document.createElement("img");
+//   const imgThree = document.createElement("img");
+//   const imgFour = document.createElement("img");
+//   const rButton = document.createElement("div");
+
+//   ////classes
+//   carousel.classList.add("carousel");
+//   lButton.classList.add("left.button");
+//   rButton.classList.add("right-button");
+
+//   /////content
+//   lButton.textContent = "<";
+//   imgOne.src = "./assets/carousel/mountains.jpeg";
+//   imgTwo.src = "./assets/carousel/computer.jpeg";
+//   imgThree.src = "./assets/carousel/trees.jpeg";
+//   imgFour.src = "./assets/carousel/turntable.jpeg";
+//   rButton.textContent = ">";
+
+//   ////append
+
+//   carousel.appendChild(lButton);
+//   carousel.appendChild(imgOne);
+//   carousel.appendChild(imgTwo);
+//   carousel.appendChild(imgThree);
+//   carousel.appendChild(imgFour);
+//   carousel.appendChild(rButton);
+
+//   console.log(carousel);
+
+//   return carousel;
+// }
+
+// daCarousel.appendChild(createCarousel());
+
 /* HTML:
   <div class="carousel">
     <div class="left-button"> < </div>
